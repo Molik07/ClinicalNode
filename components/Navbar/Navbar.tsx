@@ -51,6 +51,7 @@ export default function Navbar() {
                   key={item.label}
                   href={item.href}
                   className={styles.dropdownLink}
+                  onClick={(e) => e.preventDefault()}
                 >
                   {item.label}
                 </Link>
@@ -60,7 +61,7 @@ export default function Navbar() {
         ))}
 
         <li className={styles.navItem}>
-          <Link href="/#contact" className={styles.navLink}>
+          <Link href="/#contact" className={styles.navLink} onClick={(e) => e.preventDefault()}>
             Contact
           </Link>
         </li>
