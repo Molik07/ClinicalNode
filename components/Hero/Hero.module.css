@@ -1,0 +1,309 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 3rem;
+  background:
+    radial-gradient(ellipse 700px 600px at 85% 40%, rgba(92,61,30,0.28) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 500px at 15% 85%, rgba(61,99,64,0.25) 0%, transparent 70%),
+    var(--bg-hero);
+}
+
+/* ── Decorative Rings ── */
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 0.5px solid rgba(184,204,176,0.06);
+  pointer-events: none;
+}
+
+.ring1 {
+  width: 560px;
+  height: 560px;
+  top: -120px;
+  right: -100px;
+}
+
+.ring2 {
+  width: 860px;
+  height: 860px;
+  top: -200px;
+  right: -200px;
+}
+
+.ring3 {
+  width: 200px;
+  height: 200px;
+  bottom: 80px;
+  left: 40px;
+}
+
+.ring4 {
+  width: 180px;
+  height: 180px;
+  bottom: 60px;
+  right: 120px;
+  border-color: rgba(212,184,150,0.08);
+}
+
+/* ── Morphing Blobs ── */
+.blob {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.18;
+}
+
+.blob1 {
+  width: 380px;
+  height: 380px;
+  right: 5%;
+  top: 30%;
+  background: rgba(158,107,58,0.35);
+  animation: morph 10s ease-in-out infinite;
+  border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+}
+
+.blob2 {
+  width: 200px;
+  height: 200px;
+  left: 8%;
+  bottom: 10%;
+  background: rgba(61,99,64,0.3);
+  animation: morph 13s ease-in-out infinite;
+  border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+}
+
+/* ── Left Column Content ── */
+.content {
+  position: relative;
+  z-index: 2;
+  padding-top: 60px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0.5px solid rgba(184,204,176,0.25);
+  border-radius: 20px;
+  padding: 8px 18px;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.6s ease both;
+  animation-delay: 0s;
+}
+
+.pillDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--forest-faint);
+}
+
+.pillText {
+  font-family: var(--font-bebas);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  color: var(--forest-faint);
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-playfair);
+  font-size: clamp(2.8rem, 4.8vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text-on-dark);
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.6s ease both;
+  animation-delay: 0.1s;
+}
+
+.titleEm {
+  color: var(--brown-muted);
+  font-style: italic;
+}
+
+.body {
+  font-family: var(--font-bebas);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  line-height: 2;
+  color: var(--muted-dark);
+  max-width: 400px;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.6s ease both;
+  animation-delay: 0.2s;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 0;
+  animation: fadeUp 0.6s ease both;
+  animation-delay: 0.3s;
+}
+
+/* ── Stats Bar ── */
+.statsBar {
+  border-top: 0.5px solid var(--line-dark);
+  padding-top: 2rem;
+  margin-top: 3.5rem;
+  display: flex;
+  gap: 0;
+  animation: fadeUp 0.6s ease both;
+  animation-delay: 0.4s;
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat + .stat {
+  border-left: 0.5px solid var(--line-dark);
+  padding-left: 1.5rem;
+}
+
+.statValue {
+  font-family: var(--font-playfair);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--beige);
+  line-height: 1.2;
+}
+
+.statLabel {
+  font-family: var(--font-bebas);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--muted-dark);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── Right Column — Card Stack ── */
+.cardArea {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.cardStack {
+  position: relative;
+  width: 320px;
+  height: 380px;
+}
+
+.apptBack {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background: rgba(158,107,58,0.12);
+  border: 0.5px solid rgba(212,184,150,0.15);
+  border-radius: 16px;
+  transform: rotate(7deg);
+  opacity: 0.55;
+  animation: floatC 6s ease-in-out infinite;
+  animation-delay: 0.7s;
+}
+
+.apptMain {
+  position: relative;
+  width: 100%;
+  background: rgba(255,255,255,0.07);
+  border: 0.5px solid rgba(184,204,176,0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  animation: floatC 5.5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.apptMain:hover {
+  transform: translateY(-9px);
+}
+
+.apptLabel {
+  font-family: var(--font-bebas);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: var(--muted-dark);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.apptDoctor {
+  font-family: var(--font-playfair);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-on-dark);
+  margin-bottom: 4px;
+}
+
+.apptRole {
+  font-family: var(--font-bebas);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: var(--muted-dark);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.apptDivider {
+  height: 0;
+  border: none;
+  border-top: 0.5px solid var(--line-dark);
+  margin: 16px 0;
+}
+
+.apptRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.apptRowLabel {
+  font-family: var(--font-bebas);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  color: var(--muted-dark);
+  text-transform: uppercase;
+}
+
+.apptRowValue {
+  font-family: var(--font-bebas);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-on-dark);
+  text-transform: uppercase;
+}
+
+.apptBadge {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 16px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: rgba(61,99,64,0.18);
+  border: 0.5px solid rgba(184,204,176,0.15);
+}
+
+.apptBadgeText {
+  font-family: var(--font-bebas);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--forest-faint);
+  text-transform: uppercase;
+}

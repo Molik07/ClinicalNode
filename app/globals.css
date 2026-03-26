@@ -1,0 +1,198 @@
+/* ═══════════════════════════════════════
+   Verdana Health — Global Styles
+   ═══════════════════════════════════════ */
+
+/* ── CSS Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--cream);
+  color: var(--text-on-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* ── Color System ── */
+:root {
+  /* Forest Green family */
+  --forest:        #243b24;
+  --forest-mid:    #2e4d2e;
+  --forest-light:  #3d6340;
+  --forest-faint:  #b8ccb0;
+
+  /* Dirty Brown family */
+  --brown:         #5c3d1e;
+  --brown-mid:     #7a5230;
+  --brown-warm:    #9e6b3a;
+  --brown-muted:   #d4b896;
+
+  /* Beige / Cream family */
+  --beige:         #f0e8d8;
+  --beige-light:   #f7f2ea;
+  --cream:         #faf6ef;
+
+  /* Section base backgrounds */
+  --bg-hero:       #1e3320;
+  --bg-s2:         #f5ede0;
+  --bg-s3:         #28412a;
+  --bg-s4:         #f2e8d5;
+  --bg-s5:         #4a3018;
+  --bg-s6:         #eee5d3;
+  --bg-footer:     #1a2e1a;
+
+  /* Text */
+  --text-on-dark:  #ece5d8;
+  --text-on-light: #1e2a1e;
+  --muted-dark:    rgba(236,229,216,0.5);
+  --muted-light:   rgba(30,42,30,0.45);
+
+  /* Borders */
+  --line-dark:     rgba(184,204,176,0.15);
+  --line-light:    rgba(36,59,36,0.12);
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Global Keyframes ── */
+@keyframes floatC {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-7px); }
+}
+
+@keyframes morph {
+  0%,  100% { border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%; }
+  33%       { border-radius: 40% 60% 45% 55% / 55% 45% 60% 40%; }
+  66%       { border-radius: 55% 45% 60% 40% / 40% 60% 45% 55%; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Button System ── */
+.btn-beige {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--beige);
+  color: var(--forest);
+  font-family: var(--font-bebas);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  padding: 13px 30px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  text-transform: uppercase;
+}
+
+.btn-beige:hover {
+  transform: translateY(-1px);
+}
+
+.btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--beige);
+  font-family: var(--font-bebas);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  padding: 13px 30px;
+  border-radius: 40px;
+  border: 0.5px solid var(--beige);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  text-transform: uppercase;
+}
+
+.btn-ghost-light:hover {
+  transform: translateY(-1px);
+}
+
+.btn-forest {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--forest-mid);
+  color: var(--beige);
+  font-family: var(--font-bebas);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  padding: 13px 30px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  text-transform: uppercase;
+}
+
+.btn-forest:hover {
+  transform: translateY(-1px);
+}
+
+.btn-ghost-mid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--text-on-light);
+  font-family: var(--font-bebas);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  padding: 13px 30px;
+  border-radius: 40px;
+  border: 0.5px solid rgba(36,59,36,0.2);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  text-transform: uppercase;
+}
+
+.btn-ghost-mid:hover {
+  transform: translateY(-1px);
+}
