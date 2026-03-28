@@ -2,31 +2,7 @@
 
 import Link from 'next/link';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import styles from './Testimonials.module.css';
-
-const testimonials = [
-  {
-    quote:
-      'The doctors here actually take time to understand you. I never felt rushed. It\u2019s the most human clinic experience I\u2019ve ever had.',
-    name: 'Rohit Kapoor',
-    initials: 'RK',
-    since: 'Patient since 2019',
-  },
-  {
-    quote:
-      'Brought my daughter here for her first checkup and never looked back. Dr. Sharma is phenomenal with kids \u2014 calm, thorough, and kind.',
-    name: 'Sunita Varma',
-    initials: 'SV',
-    since: 'Patient since 2021',
-  },
-  {
-    quote:
-      'Got same-day results for my bloodwork. The staff is warm, the facilities are spotless, and the whole experience felt very grounded.',
-    name: 'Aditya Menon',
-    initials: 'AM',
-    since: 'Patient since 2022',
-  },
-];
+import { testimonials } from '@/lib/data';
 
 interface TestimonialsProps {
   teaser?: boolean;
@@ -37,24 +13,53 @@ export default function Testimonials({ teaser = false }: TestimonialsProps) {
   const items = teaser ? testimonials.slice(0, 1) : testimonials;
 
   return (
-    <section className={styles.section} ref={ref}>
-      <p className={`${styles.tag} reveal`}>Patient Stories</p>
-      <h2 className={`${styles.heading} reveal`}>
-        What our patients <em className={styles.headingEm}>say about us</em>
+    <section
+      ref={ref}
+      className="relative overflow-hidden py-28 px-12"
+      style={{
+        background: `
+          radial-gradient(ellipse 600px 500px at 5% 40%, rgba(30,51,32,0.25) 0%, transparent 65%),
+          radial-gradient(ellipse 500px 400px at 90% 85%, rgba(61,99,64,0.20) 0%, transparent 65%),
+          var(--color-bg-s5)
+        `,
+      }}
+    >
+      <p className="reveal font-bebas text-[9.5px] tracking-[0.25em] text-brown-muted/60 uppercase mb-4">
+        Patient Stories
+      </p>
+      <h2 className="reveal font-playfair text-[clamp(2rem,3.5vw,2.8rem)] font-medium leading-[1.15] text-text-on-dark mb-0">
+        What our patients <em className="text-forest-faint italic">say about us</em>
       </h2>
 
-      <div className={`${styles.grid} ${teaser ? styles.gridTeaser : ''} reveal`}>
+      <div className={`reveal grid gap-3.5 mt-12 ${teaser ? 'grid-cols-1 max-w-[33%]' : 'grid-cols-3'}`}>
         {items.map((t) => (
-          <div key={t.name} className={styles.card}>
-            <div className={styles.openQuote}>&ldquo;</div>
-            <p className={styles.quote}>{t.quote}</p>
-            <div className={styles.author}>
-              <div className={styles.authorAvatar}>
-                <span className={styles.authorInitials}>{t.initials}</span>
+          <div
+            key={t.name}
+            className="bg-[rgba(255,255,255,0.05)] border-[0.5px] border-[rgba(212,184,150,0.15)] rounded-[14px] p-8"
+          >
+            {/* Open quote */}
+            <div className="font-playfair italic text-[2.2rem] text-[rgba(212,184,150,0.2)] leading-none mb-2 select-none">
+              &ldquo;
+            </div>
+
+            <p className="font-playfair italic text-[0.92rem] text-[rgba(236,229,216,0.82)] leading-[1.8] mb-6">
+              {t.quote}
+            </p>
+
+            {/* Author */}
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-[rgba(212,184,150,0.15)] border-[0.5px] border-[rgba(212,184,150,0.2)] flex items-center justify-center">
+                <span className="font-playfair text-[0.7rem] font-medium text-brown-muted">
+                  {t.initials}
+                </span>
               </div>
-              <div className={styles.authorInfo}>
-                <span className={styles.authorName}>{t.name}</span>
-                <span className={styles.authorSince}>{t.since}</span>
+              <div className="flex flex-col gap-[2px]">
+                <span className="font-bebas text-[10.5px] tracking-[0.1em] text-brown-muted uppercase">
+                  {t.name}
+                </span>
+                <span className="font-bebas text-[9px] tracking-[0.1em] text-[rgba(212,184,150,0.3)] uppercase">
+                  {t.since}
+                </span>
               </div>
             </div>
           </div>
@@ -62,8 +67,11 @@ export default function Testimonials({ teaser = false }: TestimonialsProps) {
       </div>
 
       {teaser && (
-        <div className={`${styles.viewAll} reveal`}>
-          <Link href="/#testimonials" className={styles.viewAllLink}>
+        <div className="reveal mt-10">
+          <Link
+            href="/#testimonials"
+            className="font-bebas text-[11px] tracking-[0.14em] uppercase text-brown-muted border-b-[0.5px] border-brown-muted pb-[2px]"
+          >
             Read All Stories →
           </Link>
         </div>

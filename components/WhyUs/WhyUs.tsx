@@ -2,45 +2,35 @@
 
 import Link from 'next/link';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import styles from './WhyUs.module.css';
-
-const items = [
-  {
-    num: '01',
-    title: 'Same-Day Appointments',
-    sub: 'No long queues. Walk in or book online for same-day slots.',
-  },
-  {
-    num: '02',
-    title: 'Board-Certified Doctors',
-    sub: '15+ on-site specialists with decades of combined experience.',
-  },
-  {
-    num: '03',
-    title: 'Holistic Approach',
-    sub: 'Mind, body, and lifestyle — we treat the whole person.',
-  },
-  {
-    num: '04',
-    title: 'Private & Confidential',
-    sub: 'Your records, protected. HIPAA-compliant systems always.',
-  },
-];
+import { whyUsItems } from '@/lib/data';
 
 export default function WhyUs() {
   const ref = useScrollReveal();
 
   return (
-    <section className={styles.section} ref={ref}>
-      <div className={styles.grid}>
+    <section
+      ref={ref}
+      className="relative overflow-hidden py-28 px-12"
+      style={{
+        background: `
+          radial-gradient(ellipse 600px 500px at 85% 15%, rgba(92,61,30,0.22) 0%, transparent 65%),
+          radial-gradient(ellipse 500px 500px at 15% 85%, rgba(61,99,64,0.20) 0%, transparent 65%),
+          var(--color-bg-s3)
+        `,
+      }}
+    >
+      <div className="grid grid-cols-2 gap-20 items-center">
+        {/* Left — Heading & CTA */}
         <div>
-          <p className={`${styles.tag} reveal`}>Why Patients Choose Us</p>
-          <h2 className={`${styles.heading} reveal`}>
+          <p className="reveal font-bebas text-[9.5px] tracking-[0.25em] text-forest-faint/60 uppercase mb-4">
+            Why Patients Choose Us
+          </p>
+          <h2 className="reveal font-playfair text-[clamp(2rem,3.5vw,2.8rem)] font-medium leading-[1.15] text-text-on-dark mb-5">
             A clinic built on
             <br />
-            <em className={styles.headingEm}>trust &amp; transparency</em>
+            <em className="text-brown-muted italic">trust &amp; transparency</em>
           </h2>
-          <p className={`${styles.subtitle} reveal`}>
+          <p className="reveal font-bebas text-xs tracking-[0.06em] leading-8 text-muted-dark max-w-[440px] mb-8">
             We believe great healthcare begins with listening. Every decision we
             make is rooted in your wellbeing — not just your symptoms.
           </p>
@@ -51,12 +41,26 @@ export default function WhyUs() {
           </div>
         </div>
 
-        <div className={`${styles.numberedGrid} reveal`}>
-          {items.map((item) => (
-            <div key={item.num} className={styles.cell}>
-              <div className={styles.cellNum}>{item.num}</div>
-              <div className={styles.cellTitle}>{item.title}</div>
-              <div className={styles.cellSub}>{item.sub}</div>
+        {/* Right — 2×2 Numbered Grid */}
+        <div className="reveal border-[0.5px] border-[rgba(184,204,176,0.12)] rounded-[16px] overflow-hidden grid grid-cols-2">
+          {whyUsItems.map((item, i) => (
+            <div
+              key={item.num}
+              className={`p-8 bg-[rgba(255,255,255,0.03)] ${
+                i === 0 ? 'border-r-[0.5px] border-b-[0.5px] border-line-dark' :
+                i === 1 ? 'border-b-[0.5px] border-line-dark' :
+                i === 2 ? 'border-r-[0.5px] border-line-dark' : ''
+              }`}
+            >
+              <div className="font-playfair text-[2.2rem] font-medium text-brown-muted leading-none mb-3">
+                {item.num}
+              </div>
+              <div className="font-bebas text-[11.5px] tracking-[0.08em] text-text-on-dark uppercase mb-2">
+                {item.title}
+              </div>
+              <div className="font-bebas text-[10px] tracking-[0.06em] leading-8 text-muted-dark">
+                {item.sub}
+              </div>
             </div>
           ))}
         </div>

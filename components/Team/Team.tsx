@@ -2,37 +2,8 @@
 
 import Link from 'next/link';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import styles from './Team.module.css';
-
-const doctors = [
-  {
-    name: 'Dr. Meera Nair',
-    initials: 'MN',
-    role: 'Internal Medicine',
-    experience: '15 Years',
-    qualification: 'MBBS, MD',
-    languages: 'English, Hindi',
-    availability: 'Accepting Patients',
-  },
-  {
-    name: 'Dr. Arjun Sharma',
-    initials: 'AS',
-    role: 'Paediatrics',
-    experience: '11 Years',
-    qualification: 'MBBS, DCH',
-    languages: 'English, Tamil',
-    availability: 'Accepting Patients',
-  },
-  {
-    name: 'Dr. Priya Iyer',
-    initials: 'PI',
-    role: 'Dermatology',
-    experience: '9 Years',
-    qualification: 'MBBS, DVD',
-    languages: 'English, Telugu',
-    availability: 'Limited Availability',
-  },
-];
+import { doctors } from '@/lib/data';
+import SectionHeader from '@/components/ui/SectionHeader';
 
 interface TeamProps {
   teaser?: boolean;
@@ -43,47 +14,79 @@ export default function Team({ teaser = false }: TeamProps) {
   const items = teaser ? doctors.slice(0, 2) : doctors;
 
   return (
-    <section className={styles.section} ref={ref}>
-      <p className={`${styles.tag} reveal`}>Our Specialists</p>
-      <h2 className={`${styles.heading} reveal`}>
-        Doctors who <em className={styles.headingEm}>listen first</em>
-      </h2>
-      <p className={`${styles.subtitle} reveal`}>
-        Our team brings expertise, warmth, and a genuine commitment to every
-        patient&apos;s journey.
-      </p>
+    <section
+      ref={ref}
+      className="relative overflow-hidden py-28 px-12 border-t-[0.5px] border-[rgba(36,59,36,0.07)]"
+      style={{
+        background: `
+          radial-gradient(ellipse 500px 400px at 85% 15%, rgba(36,59,36,0.10) 0%, transparent 65%),
+          radial-gradient(ellipse 500px 400px at 10% 85%, rgba(92,61,30,0.10) 0%, transparent 65%),
+          var(--color-bg-s4)
+        `,
+      }}
+    >
+      <SectionHeader
+        tag="Our Specialists"
+        heading={<>Doctors who <em className="text-brown-mid italic">listen first</em></>}
+        subtitle="Our team brings expertise, warmth, and a genuine commitment to every patient&apos;s journey."
+        variant="light"
+      />
 
-      <div className={`${styles.grid} ${teaser ? styles.gridTeaser : ''} reveal`}>
-        {items.map((doc) => (
-          <div key={doc.name} className={styles.card}>
-            <div className={styles.avatar}>
-              <span className={styles.initials}>{doc.initials}</span>
+      <div className={`reveal grid gap-4 ${teaser ? 'grid-cols-2 max-w-[66%]' : 'grid-cols-3'}`}>
+        {items.map((doc, i) => (
+          <div
+            key={doc.name}
+            className="bg-linear-to-br from-[rgba(255,255,255,0.65)] to-[rgba(232,222,205,0.5)] border-[0.5px] border-line-light rounded-[14px] px-7 py-8 animate-float transition-transform duration-300 hover:-translate-y-[9px]"
+            style={{ animationDelay: `${i * 0.8}s` }}
+          >
+            {/* Avatar */}
+            <div className="w-[50px] h-[50px] rounded-full bg-[rgba(61,99,64,0.1)] border-[0.5px] border-[rgba(61,99,64,0.15)] flex items-center justify-center mb-5">
+              <span className="font-playfair text-base font-medium text-forest-mid">
+                {doc.initials}
+              </span>
             </div>
-            <div className={styles.name}>{doc.name}</div>
-            <div className={styles.role}>{doc.role}</div>
-            <hr className={styles.divider} />
-            <div className={styles.metaRow}>
-              <span className={styles.metaLabel}>Experience</span>
-              <span className={styles.metaValue}>{doc.experience}</span>
+
+            <div className="font-playfair text-[1.05rem] font-medium text-text-on-light mb-1">
+              {doc.name}
             </div>
-            <div className={styles.metaRow}>
-              <span className={styles.metaLabel}>Qualification</span>
-              <span className={styles.metaValue}>{doc.qualification}</span>
+            <div className="font-bebas text-[9.5px] tracking-[0.1em] text-muted-light uppercase mb-4">
+              {doc.role}
             </div>
-            <div className={styles.metaRow}>
-              <span className={styles.metaLabel}>Languages</span>
-              <span className={styles.metaValue}>{doc.languages}</span>
-            </div>
-            <div className={styles.availability}>
-              <span className={styles.availText}>{doc.availability}</span>
+
+            <hr className="h-0 border-none border-t-[0.5px] border-line-light my-4" />
+
+            {/* Meta rows */}
+            {[
+              { label: 'Experience', value: doc.experience },
+              { label: 'Qualification', value: doc.qualification },
+              { label: 'Languages', value: doc.languages },
+            ].map((row) => (
+              <div key={row.label} className="flex justify-between items-center py-1.5">
+                <span className="font-bebas text-[9px] tracking-[0.12em] text-[rgba(30,42,30,0.3)] uppercase">
+                  {row.label}
+                </span>
+                <span className="font-bebas text-[10.5px] tracking-[0.06em] text-text-on-light uppercase">
+                  {row.value}
+                </span>
+              </div>
+            ))}
+
+            {/* Availability badge */}
+            <div className="inline-flex items-center mt-4 px-3.5 py-1.5 rounded-[20px] bg-[rgba(61,99,64,0.08)] border-[0.5px] border-[rgba(61,99,64,0.12)]">
+              <span className="font-bebas text-[9px] tracking-[0.14em] text-forest-mid uppercase">
+                {doc.availability}
+              </span>
             </div>
           </div>
         ))}
       </div>
 
       {teaser && (
-        <div className={`${styles.viewAll} reveal`}>
-          <Link href="/#team" className={styles.viewAllLink}>
+        <div className="reveal mt-10">
+          <Link
+            href="/#team"
+            className="font-bebas text-[11px] tracking-[0.14em] uppercase text-forest-mid border-b-[0.5px] border-forest-mid pb-[2px]"
+          >
             Meet the Team →
           </Link>
         </div>
