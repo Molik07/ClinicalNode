@@ -15,7 +15,7 @@ export default function Testimonials({ teaser = false }: TestimonialsProps) {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden py-28 px-12"
+      className="relative overflow-hidden min-h-[120vh] py-28 px-12 flex flex-col justify-center"
       style={{
         background: `
           radial-gradient(ellipse 600px 500px at 5% 40%, rgba(30,51,32,0.25) 0%, transparent 65%),
@@ -24,14 +24,42 @@ export default function Testimonials({ teaser = false }: TestimonialsProps) {
         `,
       }}
     >
+      {/* Decorative rings — dark forest/golden tones */}
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(212,184,150,0.06)] pointer-events-none w-[340px] h-[340px] -top-[70px] -left-[100px]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(212,184,150,0.04)] pointer-events-none w-[560px] h-[560px] -top-[150px] -left-[180px]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(184,204,176,0.05)] pointer-events-none w-[170px] h-[170px] bottom-[100px] right-[8%]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(184,204,176,0.04)] pointer-events-none w-[280px] h-[280px] bottom-[50px] right-[4%]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(212,184,150,0.05)] pointer-events-none w-[100px] h-[100px] top-[35%] right-[35%]" />
+
+      {/* Morphing blobs */}
+      <div
+        className="absolute pointer-events-none opacity-[0.11] w-[180px] h-[180px] left-[6%] bottom-[20%] animate-morph"
+        style={{
+          background: 'rgba(212,184,150,0.25)',
+          animationDuration: '11s',
+          borderRadius: '55% 45% 60% 40% / 40% 60% 45% 55%',
+        }}
+      />
+      <div
+        className="absolute pointer-events-none opacity-[0.09] w-[140px] h-[140px] right-[6%] top-[20%] animate-morph"
+        style={{
+          background: 'rgba(61,99,64,0.4)',
+          animationDuration: '14s',
+          borderRadius: '40% 60% 55% 45% / 55% 45% 60% 40%',
+        }}
+      />
+
       <p className="reveal font-bebas text-[9.5px] tracking-[0.25em] text-brown-muted/60 uppercase mb-4">
         Patient Stories
       </p>
-      <h2 className="reveal font-playfair text-[clamp(2rem,3.5vw,2.8rem)] font-medium leading-[1.15] text-text-on-dark mb-0">
+      <h2 className="reveal font-playfair text-[clamp(2rem,3.5vw,2.8rem)] font-medium leading-[1.15] text-text-on-dark mb-4">
         What our patients <em className="text-forest-faint italic">say about us</em>
       </h2>
+      <p className="reveal font-bebas text-xs tracking-[0.06em] leading-8 text-[rgba(236,229,216,0.7)] max-w-[500px] mb-2">
+        We prioritize your health, comfort, and peace of mind. Read stories from patients who trust us with their lifelong care.
+      </p>
 
-      <div className={`reveal grid gap-3.5 mt-12 ${teaser ? 'grid-cols-1 max-w-[33%]' : 'grid-cols-3'}`}>
+      <div className={`reveal grid gap-3.5 mt-8 ${teaser ? 'grid-cols-1 max-w-[33%]' : 'grid-cols-3'}`}>
         {items.map((t) => (
           <div
             key={t.name}

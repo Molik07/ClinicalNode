@@ -10,7 +10,7 @@ export default function WhyUs() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden py-28 px-12"
+      className="relative overflow-hidden min-h-[120vh] py-28 px-12 flex items-center justify-center"
       style={{
         background: `
           radial-gradient(ellipse 600px 500px at 85% 15%, rgba(92,61,30,0.22) 0%, transparent 65%),
@@ -19,7 +19,32 @@ export default function WhyUs() {
         `,
       }}
     >
-      <div className="grid grid-cols-2 gap-20 items-center">
+      {/* Decorative rings — dark forest/brown tones */}
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(184,204,176,0.05)] pointer-events-none w-[300px] h-[300px] top-[10%] -right-[80px]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(184,204,176,0.04)] pointer-events-none w-[480px] h-[480px] top-[5%] -right-[150px]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(212,184,150,0.06)] pointer-events-none w-[180px] h-[180px] bottom-[80px] right-[30%]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(184,204,176,0.04)] pointer-events-none w-[100px] h-[100px] top-[40%] left-[2%]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(212,184,150,0.05)] pointer-events-none w-[200px] h-[200px] -bottom-[60px] left-[10%]" />
+
+      {/* Morphing blobs */}
+      <div
+        className="absolute pointer-events-none opacity-[0.12] w-[200px] h-[200px] right-[3%] top-[25%] animate-morph"
+        style={{
+          background: 'rgba(158,107,58,0.3)',
+          animationDuration: '14s',
+          borderRadius: '50% 50% 60% 40% / 40% 60% 50% 50%',
+        }}
+      />
+      <div
+        className="absolute pointer-events-none opacity-[0.10] w-[140px] h-[140px] left-[3%] bottom-[20%] animate-morph"
+        style={{
+          background: 'rgba(61,99,64,0.35)',
+          animationDuration: '11s',
+          borderRadius: '60% 40% 50% 50% / 50% 50% 40% 60%',
+        }}
+      />
+
+      <div className="grid grid-cols-2 gap-20 items-center w-full">
         {/* Left — Heading & CTA */}
         <div>
           <p className="reveal font-bebas text-[9.5px] tracking-[0.25em] text-forest-faint/60 uppercase mb-4">
@@ -32,7 +57,7 @@ export default function WhyUs() {
           </h2>
           <p className="reveal font-bebas text-xs tracking-[0.06em] leading-8 text-muted-dark max-w-[440px] mb-8">
             We believe great healthcare begins with listening. Every decision we
-            make is rooted in your wellbeing — not just your symptoms.
+            make is rooted in your wellbeing — not just your symptoms. Our dedicated team of professionals ensures you receive the most advanced and compassionate care available, tailored to your unique lifestyle and needs.
           </p>
           <div className="reveal">
             <Link href="/#contact" className="btn-beige">

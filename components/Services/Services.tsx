@@ -44,7 +44,7 @@ export default function Services({ teaser = false }: ServicesProps) {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden py-28 px-12 border-t-[0.5px] border-[rgba(36,59,36,0.08)]"
+      className="relative overflow-hidden min-h-[120vh] py-28 px-12 border-t-[0.5px] border-[rgba(36,59,36,0.08)] flex flex-col justify-center"
       style={{
         background: `
           radial-gradient(ellipse 600px 500px at 5% 50%, rgba(36,59,36,0.07) 0%, transparent 65%),
@@ -53,10 +53,35 @@ export default function Services({ teaser = false }: ServicesProps) {
         `,
       }}
     >
+      {/* Decorative rings — light beige/green tones */}
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(61,99,64,0.16)] pointer-events-none w-[320px] h-[320px] -top-[80px] -right-[60px]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(61,99,64,0.11)] pointer-events-none w-[520px] h-[520px] -top-[140px] -right-[130px]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(92,61,30,0.14)] pointer-events-none w-[160px] h-[160px] bottom-[100px] left-[60px]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(92,61,30,0.11)] pointer-events-none w-[260px] h-[260px] bottom-[60px] left-[20px]" />
+      <div className="absolute rounded-full border-[0.5px] border-[rgba(61,99,64,0.13)] pointer-events-none w-[120px] h-[120px] top-[30%] left-[45%]" />
+
+      {/* Morphing blobs */}
+      <div
+        className="absolute pointer-events-none opacity-[0.10] w-[220px] h-[220px] right-[8%] bottom-[15%] animate-morph"
+        style={{
+          background: 'rgba(92,61,30,0.3)',
+          animationDuration: '12s',
+          borderRadius: '55% 45% 60% 40% / 40% 60% 45% 55%',
+        }}
+      />
+      <div
+        className="absolute pointer-events-none opacity-[0.08] w-[150px] h-[150px] left-[5%] top-[20%] animate-morph"
+        style={{
+          background: 'rgba(61,99,64,0.35)',
+          animationDuration: '15s',
+          borderRadius: '40% 60% 45% 55% / 55% 45% 60% 40%',
+        }}
+      />
+
       <SectionHeader
         tag="What We Offer"
         heading={<>Care across every <em className="text-brown-mid italic">specialty</em></>}
-        subtitle="From preventive wellness to advanced diagnostics — all under one roof, rooted in compassion."
+        subtitle="From preventive wellness to advanced diagnostics — all under one roof, rooted in compassion. Our state-of-the-art facilities ensure that you receive precise, timely, and holistic care for any condition."
         variant="light"
       />
 

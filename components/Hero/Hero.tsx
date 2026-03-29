@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section
-      className="relative overflow-hidden min-h-screen grid grid-cols-2 items-center px-12"
+      className="relative overflow-hidden min-h-[120vh] grid grid-cols-2 items-center px-12"
       style={{
         background: `
           radial-gradient(ellipse 700px 600px at 85% 40%, rgba(92,61,30,0.28) 0%, transparent 70%),
