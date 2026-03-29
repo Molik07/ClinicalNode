@@ -42,3 +42,6 @@ tsc_output.txt
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore README
+README.md
