@@ -44,7 +44,7 @@ export default function Services({ teaser = false }: ServicesProps) {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden min-h-[120vh] py-28 px-12 border-t-[0.5px] border-[rgba(36,59,36,0.08)] flex flex-col justify-center"
+      className="relative overflow-hidden min-h-[120vh] py-28 px-12 border-t-[0.5px] border-[rgba(36,59,36,0.08)] flex flex-col justify-center selection:bg-[#9e6b3a] selection:text-[#faf6ef]"
       style={{
         background: `
           radial-gradient(ellipse 600px 500px at 5% 50%, rgba(36,59,36,0.07) 0%, transparent 65%),
