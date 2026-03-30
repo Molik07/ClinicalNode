@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section
-      className="relative overflow-hidden min-h-[120vh] grid grid-cols-2 items-center px-12"
+      className="relative overflow-hidden min-h-[100vh] grid grid-cols-2 items-center px-12"
       style={{
         background: `
           radial-gradient(ellipse 700px 600px at 85% 40%, rgba(92,61,30,0.28) 0%, transparent 70%),
@@ -39,7 +39,7 @@ export default function Hero() {
       />
 
       {/* Left column — Content */}
-      <div className="relative z-[2] pt-[60px]">
+      <div className="relative z-[2] pt-[20px]">
         {/* Pill badge */}
         <div className="inline-flex items-center gap-2 border-[0.5px] border-[rgba(184,204,176,0.25)] rounded-[20px] px-[18px] py-2 mb-8 animate-fade-up">
           <span className="w-[5px] h-[5px] rounded-full bg-forest-faint" />
@@ -58,7 +58,7 @@ export default function Hero() {
         </h1>
 
         {/* Description */}
-        <p className="font-bebas text-xs tracking-[0.06em] leading-8 text-muted-dark max-w-[400px] mb-8 animate-fade-up [animation-delay:0.2s]">
+        <p className="font-bebas text-[14px] tracking-[0.06em] leading-8 text-muted-dark max-w-[400px] mb-8 animate-fade-up [animation-delay:0.2s]">
           Compassionate, evidence-based care for every stage of life — from
           routine checkups to complex diagnoses.
         </p>
@@ -96,7 +96,7 @@ export default function Hero() {
       </div>
 
       {/* Right column — Card Area (placeholder) */}
-      <div className="relative z-[2] flex justify-center items-center pt-[60px]" />
+      <div className="relative z-[2] flex justify-center items-center pt-[20px]" />
     </section>
   );
 }
