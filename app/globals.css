@@ -116,6 +116,27 @@
   }
 }
 
+/* ── Liquid Glass Backdrop Filter ── */
+/*
+ * Primary: SVG displacement map refraction (Chrome/Chromium only).
+ * Fallback: Frosted glass blur for Firefox/Safari.
+ * The .liquid-glass-backdrop class is applied to the navbar element.
+ */
+.liquid-glass-backdrop {
+  /* Chrome: real physics-based refraction via SVG feDisplacementMap */
+  -webkit-backdrop-filter: url(#liquidGlass);
+  backdrop-filter: url(#liquidGlass);
+}
+
+/* Fallback for browsers that don't support SVG backdrop-filter */
+@supports not (backdrop-filter: url(#liquidGlass)) {
+  .liquid-glass-backdrop {
+    -webkit-backdrop-filter: blur(14px) saturate(180%) brightness(1.05);
+    backdrop-filter: blur(14px) saturate(180%) brightness(1.05);
+    background: rgba(20, 36, 20, 0.55) !important;
+  }
+}
+
 /* ── Scroll Reveal ── */
 @layer utilities {
   .reveal {
