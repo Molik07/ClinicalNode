@@ -47,7 +47,7 @@ export default function WhyUs() {
       <div className="grid grid-cols-2 gap-20 items-center w-full">
         {/* Left — Heading & CTA */}
         <div>
-          <p className="reveal font-bebas text-[9.5px] tracking-[0.25em] text-forest-faint/60 uppercase mb-4">
+          <p className="reveal font-inter text-[9.5px] tracking-[0.25em] text-forest-faint/60 uppercase mb-4">
             Why Patients Choose Us
           </p>
           <h2 className="reveal font-playfair text-[clamp(2rem,3.5vw,2.8rem)] font-medium leading-[1.15] text-text-on-dark mb-5">
@@ -55,7 +55,7 @@ export default function WhyUs() {
             <br />
             <em className="text-brown-muted italic">trust &amp; transparency</em>
           </h2>
-          <p className="reveal font-bebas text-xs tracking-[0.06em] leading-8 text-muted-dark max-w-[440px] mb-8">
+          <p className="reveal font-inter text-xs tracking-[0.06em] leading-8 text-muted-dark max-w-[440px] mb-8">
             We believe great healthcare begins with listening. Every decision we
             make is rooted in your wellbeing — not just your symptoms. Our dedicated team of professionals ensures you receive the most advanced and compassionate care available, tailored to your unique lifestyle and needs.
           </p>
@@ -80,10 +80,10 @@ export default function WhyUs() {
               <div className="font-playfair text-[2.2rem] font-medium text-brown-muted leading-none mb-3">
                 {item.num}
               </div>
-              <div className="font-bebas text-[11.5px] tracking-[0.08em] text-text-on-dark uppercase mb-2">
+              <div className="font-inter text-[11.5px] tracking-[0.08em] text-text-on-dark uppercase mb-2">
                 {item.title}
               </div>
-              <div className="font-bebas text-[10px] tracking-[0.06em] leading-8 text-muted-dark">
+              <div className="font-inter text-[10px] tracking-[0.06em] leading-8 text-muted-dark">
                 {item.sub}
               </div>
             </div>

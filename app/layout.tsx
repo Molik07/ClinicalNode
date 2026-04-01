@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Bebas_Neue } from 'next/font/google';
+import { Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
@@ -12,10 +12,9 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-const bebas = Bebas_Neue({
+const inter = Inter({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-bebas',
+  variable: '--font-inter',
   display: 'swap',
 });
 
@@ -31,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${bebas.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body>
         <Navbar />
         <main>{children}</main>

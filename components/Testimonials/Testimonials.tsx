@@ -49,13 +49,13 @@ export default function Testimonials({ teaser = false }: TestimonialsProps) {
         }}
       />
 
-      <p className="reveal font-bebas text-[9.5px] tracking-[0.25em] text-brown-muted/60 uppercase mb-4">
+      <p className="reveal font-inter text-[9.5px] tracking-[0.25em] text-brown-muted/60 uppercase mb-4">
         Patient Stories
       </p>
       <h2 className="reveal font-playfair text-[clamp(2rem,3.5vw,2.8rem)] font-medium leading-[1.15] text-text-on-dark mb-4">
         What our patients <em className="text-forest-faint italic">say about us</em>
       </h2>
-      <p className="reveal font-bebas text-xs tracking-[0.06em] leading-8 text-[rgba(236,229,216,0.7)] max-w-[500px] mb-2">
+      <p className="reveal font-inter text-xs tracking-[0.06em] leading-8 text-[rgba(236,229,216,0.7)] max-w-[500px] mb-2">
         We prioritize your health, comfort, and peace of mind. Read stories from patients who trust us with their lifelong care.
       </p>
 
@@ -82,10 +82,10 @@ export default function Testimonials({ teaser = false }: TestimonialsProps) {
                 </span>
               </div>
               <div className="flex flex-col gap-[2px]">
-                <span className="font-bebas text-[10.5px] tracking-[0.1em] text-brown-muted uppercase">
+                <span className="font-inter text-[10.5px] tracking-[0.1em] text-brown-muted uppercase">
                   {t.name}
                 </span>
-                <span className="font-bebas text-[9px] tracking-[0.1em] text-[rgba(212,184,150,0.3)] uppercase">
+                <span className="font-inter text-[9px] tracking-[0.1em] text-[rgba(212,184,150,0.3)] uppercase">
                   {t.since}
                 </span>
               </div>
@@ -98,7 +98,7 @@ export default function Testimonials({ teaser = false }: TestimonialsProps) {
         <div className="reveal mt-10">
           <Link
             href="/#testimonials"
-            className="font-bebas text-[11px] tracking-[0.14em] uppercase text-brown-muted border-b-[0.5px] border-brown-muted pb-[2px]"
+            className="font-inter text-[11px] tracking-[0.14em] uppercase text-brown-muted border-b-[0.5px] border-brown-muted pb-[2px]"
           >
             Read All Stories →
           </Link>

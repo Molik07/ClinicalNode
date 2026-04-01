@@ -16,14 +16,14 @@ export default function PageHero({ eyebrow, title, subtitle }: PageHeroProps) {
         `,
       }}
     >
-      <p className="font-bebas text-[9.5px] tracking-[0.25em] text-forest-faint uppercase mb-4">
+      <p className="font-inter text-[9.5px] tracking-[0.25em] text-forest-faint uppercase mb-4">
         {eyebrow}
       </p>
       <h1 className="font-playfair text-[clamp(2.2rem,4vw,3.2rem)] font-medium leading-[1.15] text-text-on-dark max-w-[600px]">
         {title}
       </h1>
       {subtitle && (
-        <p className="font-bebas text-xs tracking-[0.06em] leading-8 text-muted-dark max-w-[500px] mt-5">
+        <p className="font-inter text-xs tracking-[0.06em] leading-8 text-muted-dark max-w-[500px] mt-5">
           {subtitle}
         </p>
       )}

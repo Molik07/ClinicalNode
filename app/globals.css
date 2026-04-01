@@ -43,7 +43,7 @@
 
   /* ── Fonts ── */
   --font-playfair: var(--font-playfair-display), 'Playfair Display', serif;
-  --font-bebas: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  --font-inter: var(--font-inter), 'Inter', sans-serif;
 
   /* ── Keyframes ── */
   --animate-float: floatC 5.5s ease-in-out infinite;
@@ -157,7 +157,7 @@
     @apply inline-flex items-center justify-center rounded-full border-none cursor-pointer uppercase;
     background: var(--color-beige);
     color: var(--color-forest);
-    font-family: var(--font-bebas);
+    font-family: var(--font-inter);
     font-size: 12px;
     letter-spacing: 0.14em;
     padding: 13px 30px;
@@ -171,7 +171,7 @@
     @apply inline-flex items-center justify-center rounded-full cursor-pointer uppercase;
     background: transparent;
     color: var(--color-beige);
-    font-family: var(--font-bebas);
+    font-family: var(--font-inter);
     font-size: 12px;
     letter-spacing: 0.14em;
     padding: 13px 30px;
@@ -186,7 +186,7 @@
     @apply inline-flex items-center justify-center rounded-full border-none cursor-pointer uppercase;
     background: var(--color-forest-mid);
     color: var(--color-beige);
-    font-family: var(--font-bebas);
+    font-family: var(--font-inter);
     font-size: 12px;
     letter-spacing: 0.14em;
     padding: 13px 30px;
@@ -200,7 +200,7 @@
     @apply inline-flex items-center justify-center rounded-full cursor-pointer uppercase;
     background: transparent;
     color: var(--color-text-on-light);
-    font-family: var(--font-bebas);
+    font-family: var(--font-inter);
     font-size: 12px;
     letter-spacing: 0.14em;
     padding: 13px 30px;

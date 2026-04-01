@@ -23,7 +23,7 @@ export default function SectionHeader({
   return (
     <div>
       <p
-        className={`reveal font-bebas text-[9.5px] tracking-[0.25em] uppercase mb-4 ${tagColor}`}
+        className={`reveal font-inter text-[9.5px] tracking-[0.25em] uppercase mb-4 ${tagColor}`}
       >
         {tag}
       </p>
@@ -34,7 +34,7 @@ export default function SectionHeader({
       </h2>
       {subtitle && (
         <p
-          className={`reveal font-bebas text-xs tracking-[0.06em] leading-8 max-w-[520px] mb-12 ${subtitleColor}`}
+          className={`reveal font-inter text-xs tracking-[0.06em] leading-8 max-w-[520px] mb-12 ${subtitleColor}`}
         >
           {subtitle}
         </p>

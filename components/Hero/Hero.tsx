@@ -43,7 +43,7 @@ export default function Hero() {
         {/* Pill badge */}
         <div className="inline-flex items-center gap-2 border-[0.5px] border-[rgba(184,204,176,0.25)] rounded-[20px] px-[18px] py-2 mb-8 animate-fade-up">
           <span className="w-[5px] h-[5px] rounded-full bg-forest-faint" />
-          <span className="font-bebas text-[9.5px] tracking-[0.22em] text-forest-faint uppercase">
+          <span className="font-inter text-[9.5px] tracking-[0.22em] text-forest-faint uppercase">
             Trusted Clinic · Est. 2004
           </span>
         </div>
@@ -58,7 +58,7 @@ export default function Hero() {
         </h1>
 
         {/* Description */}
-        <p className="font-bebas text-[14px] tracking-[0.06em] leading-8 text-muted-dark max-w-[400px] mb-8 animate-fade-up [animation-delay:0.2s]">
+        <p className="font-inter text-[14px] tracking-[0.06em] leading-8 text-muted-dark max-w-[400px] mb-8 animate-fade-up [animation-delay:0.2s]">
           Compassionate, evidence-based care for every stage of life — from
           routine checkups to complex diagnoses.
         </p>
@@ -87,7 +87,7 @@ export default function Hero() {
               <span className="font-playfair text-[2rem] font-medium text-beige leading-[1.2]">
                 {stat.value}
               </span>
-              <span className="font-bebas text-[9px] tracking-[0.2em] text-muted-dark uppercase mt-1">
+              <span className="font-inter text-[9px] tracking-[0.2em] text-muted-dark uppercase mt-1">
                 {stat.label}
               </span>
             </div>

@@ -56,7 +56,7 @@ export default function Cta() {
             <br />
             step in <em className="text-brown-mid italic">your care?</em>
           </h2>
-          <p className="font-bebas text-xs tracking-[0.06em] leading-8 text-muted-light max-w-[540px]">
+          <p className="font-inter text-xs tracking-[0.06em] leading-8 text-muted-light max-w-[540px]">
             Book an appointment online or call us — we&apos;ll find a time that
             works for you. Over the years, we&apos;ve helped thousands of patients achieve their health goals. Join our community and experience care that puts you first.
           </p>

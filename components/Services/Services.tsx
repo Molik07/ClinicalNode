@@ -98,10 +98,10 @@ export default function Services({ teaser = false }: ServicesProps) {
             <h3 className="font-playfair text-[1.05rem] font-medium text-text-on-light mb-3">
               {svc.title}
             </h3>
-            <p className="font-bebas text-[11px] tracking-[0.06em] leading-8 text-muted-light mb-5">
+            <p className="font-inter text-[11px] tracking-[0.06em] leading-8 text-muted-light mb-5">
               {svc.desc}
             </p>
-            <span className="group/arrow inline-flex items-center gap-1.5 font-bebas text-[10px] tracking-[0.14em] text-forest-mid uppercase">
+            <span className="group/arrow inline-flex items-center gap-1.5 font-inter text-[10px] tracking-[0.14em] text-forest-mid uppercase">
               Learn more
               <span className="relative inline-block w-4 h-0 border-t-[0.5px] border-forest-mid transition-[width] duration-[250ms] group-hover/arrow:w-6 after:content-[''] after:absolute after:right-0 after:-top-[3px] after:w-[5px] after:h-[5px] after:border-r-[0.5px] after:border-t-[0.5px] after:border-forest-mid after:rotate-45" />
             </span>
@@ -113,7 +113,7 @@ export default function Services({ teaser = false }: ServicesProps) {
         <div className="reveal mt-10">
           <Link
             href="/#services"
-            className="font-bebas text-[11px] tracking-[0.14em] uppercase text-forest-mid border-b-[0.5px] border-forest-mid pb-[2px]"
+            className="font-inter text-[11px] tracking-[0.14em] uppercase text-forest-mid border-b-[0.5px] border-forest-mid pb-[2px]"
           >
             View All Services →
           </Link>

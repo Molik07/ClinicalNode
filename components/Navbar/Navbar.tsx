@@ -12,7 +12,7 @@ function DropdownMenu({ title, items }: { title: string, items: { label: string,
 
   return (
     <li className="relative px-3.5 group">
-      <span className="font-bebas text-[10.5px] tracking-[0.15em] text-[rgba(240,232,216,0.75)] uppercase transition-colors duration-200 flex items-center gap-[5px] cursor-pointer py-5 hover:text-beige">
+      <span className="font-inter text-[10.5px] tracking-[0.15em] text-[rgba(240,232,216,0.75)] uppercase transition-colors duration-200 flex items-center gap-[5px] cursor-pointer py-5 hover:text-beige">
         {title}
         {/* Animated chevron */}
         <span className="inline-block w-[5px] h-[5px] border-r-[0.5px] border-b-[0.5px] border-current rotate-45 transition-transform duration-200 group-hover:-rotate-[135deg]" />
@@ -42,7 +42,7 @@ function DropdownMenu({ title, items }: { title: string, items: { label: string,
           <Link
             key={item.label}
             href={item.href}
-            className="block px-[18px] py-2 font-bebas text-[10.5px] tracking-[0.12em] text-[rgba(184,204,176,0.6)] uppercase transition-colors duration-150 hover:text-beige"
+            className="block px-[18px] py-2 font-inter text-[10.5px] tracking-[0.12em] text-[rgba(184,204,176,0.6)] uppercase transition-colors duration-150 hover:text-beige"
             onClick={(e) => e.preventDefault()}
           >
             {item.label}
@@ -90,7 +90,7 @@ export default function Navbar() {
           <li className="relative px-3.5">
             <Link
               href="/#contact"
-              className="font-bebas text-[10.5px] tracking-[0.15em] text-[rgba(240,232,216,0.75)] uppercase transition-colors duration-200 flex items-center gap-[5px] cursor-pointer py-5 hover:text-beige"
+              className="font-inter text-[10.5px] tracking-[0.15em] text-[rgba(240,232,216,0.75)] uppercase transition-colors duration-200 flex items-center gap-[5px] cursor-pointer py-5 hover:text-beige"
               onClick={(e) => e.preventDefault()}
             >
               Contact
@@ -103,7 +103,7 @@ export default function Navbar() {
               href="/#contact"
               className="
                 bg-[rgba(240,232,216,0.9)] text-forest
-                font-bebas text-[10.5px] tracking-[0.15em] uppercase
+                font-inter text-[10.5px] tracking-[0.15em] uppercase
                 px-5 py-2 rounded-full ml-2.5
                 border-[0.5px] border-[rgba(255,255,255,0.4)]
                 transition-all duration-200
