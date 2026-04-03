@@ -108,6 +108,69 @@ export const testimonials: Testimonial[] = [
     initials: 'AM',
     since: 'Patient since 2022',
   },
+  {
+    quote:
+      'My chronic back issues had me seeing three different specialists with no relief. Here they coordinated everything under one roof and I finally have answers.',
+    name: 'Kavitha Rajan',
+    initials: 'KR',
+    since: 'Patient since 2020',
+  },
+  {
+    quote:
+      'I appreciate how they explain every test and every result in plain language. No medical jargon, just genuine conversation.',
+    name: 'Farhan Sheikh',
+    initials: 'FS',
+    since: 'Patient since 2018',
+  },
+  {
+    quote:
+      'The waiting room actually feels calm and welcoming. That alone sets this place apart from every other clinic I\u2019ve visited.',
+    name: 'Preethi Nambiar',
+    initials: 'PN',
+    since: 'Patient since 2023',
+  },
+  {
+    quote:
+      'Called at 8 AM and had an appointment by 10 AM the same day. The speed without sacrificing quality is genuinely impressive.',
+    name: 'Jayesh Patel',
+    initials: 'JP',
+    since: 'Patient since 2021',
+  },
+  {
+    quote:
+      'Dr. Iyer caught something in my skin checkup that three other dermatologists had missed. I\u2019m so grateful I switched to Verdana.',
+    name: 'Meghna Rao',
+    initials: 'MR',
+    since: 'Patient since 2022',
+  },
+  {
+    quote:
+      'The follow-up calls after my procedure showed me they genuinely care beyond the appointment. That kind of attention is rare.',
+    name: 'Suresh Balaji',
+    initials: 'SB',
+    since: 'Patient since 2017',
+  },
+  {
+    quote:
+      'I\u2019ve been bringing my elderly mother here for two years. The patience and respect they show her makes a world of difference to our family.',
+    name: 'Ananya Krishnan',
+    initials: 'AK',
+    since: 'Patient since 2024',
+  },
+  {
+    quote:
+      'Clean, modern, and the online booking portal is flawless. Finally a clinic that respects your time from start to finish.',
+    name: 'Vikram Sood',
+    initials: 'VS',
+    since: 'Patient since 2023',
+  },
+  {
+    quote:
+      'My cardiac evaluation was handled with precision and empathy. The cardiologist spent over an hour with me going through every detail.',
+    name: 'Leela Menon',
+    initials: 'LM',
+    since: 'Patient since 2020',
+  },
 ];
 
 /* ── Why Us Items ── */

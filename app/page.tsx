@@ -12,7 +12,7 @@ export default function Home() {
       <div id="services"><Services teaser /></div>
       <div id="about"><WhyUs /></div>
       <div id="team"><Team teaser /></div>
-      <div id="testimonials"><Testimonials teaser /></div>
+      <div id="testimonials"><Testimonials /></div>
       <div id="contact"><Cta /></div>
     </>
   );

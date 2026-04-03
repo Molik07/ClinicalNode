@@ -198,9 +198,9 @@ export default function Team({ teaser = false }: TeamProps) {
         <div className="reveal mt-10 mx-auto">
           <Link
             href="/#team"
-            className="font-inter text-[11px] tracking-[0.14em] uppercase text-forest-mid border-b-[0.5px] border-forest-mid pb-[2px]"
+            className="btn-forest shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
-            Meet the Team →
+            Meet the Team
           </Link>
         </div>
       )}

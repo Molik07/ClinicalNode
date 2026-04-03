@@ -50,9 +50,7 @@ export default function Hero() {
 
         {/* Main heading */}
         <h1 className="font-playfair text-[clamp(2.8rem,4.8vw,3.8rem)] font-medium leading-[1.1] text-text-on-dark mb-6 animate-fade-up [animation-delay:0.1s]">
-          Healing
-          <br />
-          rooted in
+          Healing rooted in
           <br />
           <em className="text-brown-muted italic">nature &amp; science</em>
         </h1>
@@ -74,7 +72,7 @@ export default function Hero() {
         </div>
 
         {/* Stats Bar */}
-        <div className="border-t-[0.5px] border-line-dark pt-8 mt-14 flex animate-fade-up [animation-delay:0.4s]">
+        <div className="border-t-[0.5px] border-line-dark pt-12 mt-20 flex animate-fade-up [animation-delay:0.4s]">
           {[
             { value: '14k+', label: 'Patients Treated' },
             { value: '98%', label: 'Satisfaction Rate' },
@@ -82,12 +80,12 @@ export default function Hero() {
           ].map((stat, i) => (
             <div
               key={stat.label}
-              className={`flex-1 flex flex-col items-start ${i > 0 ? 'border-l-[0.5px] border-line-dark pl-6' : ''}`}
+              className={`flex-1 flex flex-col items-start ${i > 0 ? 'border-l-[0.5px] border-line-dark pl-10' : ''}`}
             >
-              <span className="font-playfair text-[2rem] font-medium text-beige leading-[1.2]">
+              <span className="font-playfair text-[2.8rem] font-medium text-beige leading-[1.1]">
                 {stat.value}
               </span>
-              <span className="font-inter text-[9px] tracking-[0.2em] text-muted-dark uppercase mt-1">
+              <span className="font-inter text-[11px] tracking-[0.22em] text-muted-dark uppercase mt-2">
                 {stat.label}
               </span>
             </div>

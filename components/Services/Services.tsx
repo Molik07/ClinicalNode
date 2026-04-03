@@ -113,9 +113,9 @@ export default function Services({ teaser = false }: ServicesProps) {
         <div className="reveal mt-10">
           <Link
             href="/#services"
-            className="font-inter text-[11px] tracking-[0.14em] uppercase text-forest-mid border-b-[0.5px] border-forest-mid pb-[2px]"
+            className="btn-forest shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
-            View All Services →
+            View All Services
           </Link>
         </div>
       )}

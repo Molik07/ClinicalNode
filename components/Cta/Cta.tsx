@@ -49,21 +49,32 @@ export default function Cta() {
         }}
       />
 
-      <div className="reveal grid grid-cols-[1fr_auto] gap-16 items-center w-full">
-        <div>
-          <h2 className="font-playfair text-[clamp(2rem,3.5vw,2.8rem)] font-medium leading-[1.15] text-text-on-light mb-4">
-            Ready to take the next
-            <br />
-            step in <em className="text-brown-mid italic">your care?</em>
-          </h2>
-          <p className="font-inter text-xs tracking-[0.06em] leading-8 text-muted-light max-w-[540px]">
-            Book an appointment online or call us — we&apos;ll find a time that
-            works for you. Over the years, we&apos;ve helped thousands of patients achieve their health goals. Join our community and experience care that puts you first.
-          </p>
-        </div>
+      {/* Phone Receiver Graphic */}
+      <div className="absolute top-[10%] right-0 translate-x-[15%] lg:translate-x-[22%] w-[450px] md:w-[600px] lg:w-[750px] xl:w-[850px] pointer-events-none select-none z-0 mix-blend-multiply opacity-90">
+        <img 
+          src="/receiver_clean.webp" 
+          alt="Vintage Telephone Receiver" 
+          className="w-full h-auto object-contain select-none pointer-events-none"
+        />
+      </div>
 
-        <div className="flex flex-col gap-3 items-end">
-          <Link href="/#contact" className="btn-forest">
+      <div className="relative z-10 reveal flex flex-col items-center text-center max-w-[800px]">
+        <h2 className="font-playfair text-[clamp(2.5rem,5vw,3.8rem)] font-medium leading-[1.1] text-text-on-light mb-8">
+          Ready to take the next
+          <br />
+          step in <em className="text-brown-mid italic">your care?</em>
+        </h2>
+        <p className="font-inter text-xs tracking-[0.06em] leading-8 text-muted-light max-w-[620px] mb-14">
+          Book an appointment online or call us — we&apos;ll find a time that
+          works for you. Over the years, we&apos;ve helped thousands of patients achieve their health goals. Join our community and experience care that puts you first.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-6 items-center justify-center">
+          <Link 
+            href="/#contact" 
+            className="btn-forest"
+            style={{ padding: '20px 48px', fontSize: '14px', letterSpacing: '0.18em' }}
+          >
             Book Appointment
           </Link>
           <Link href="/#contact" className="btn-ghost-mid">
