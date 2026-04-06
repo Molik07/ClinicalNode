@@ -8,7 +8,13 @@ export const metadata: Metadata = {
     'Read every patient testimonial and review from Verdana Health. Real stories from real people who trust us with their care.',
 };
 
-export default function TestimonialsPage() {
+// Simulates async data fetching — replace with real DB/API call in production
+async function getTestimonials() {
+  return testimonials;
+}
+
+export default async function TestimonialsPage() {
+  const items = await getTestimonials();
   return (
     <main
       className="min-h-screen"
@@ -72,7 +78,7 @@ export default function TestimonialsPage() {
         {/* Count badge */}
         <div className="flex items-center gap-3 mb-10">
           <span className="font-inter text-[9px] tracking-[0.22em] text-brown-muted/40 uppercase">
-            {testimonials.length} Reviews
+            {items.length} Reviews
           </span>
           <div className="flex-1 border-t-[0.5px] border-[rgba(212,184,150,0.08)]" />
         </div>
@@ -81,7 +87,7 @@ export default function TestimonialsPage() {
           className="grid gap-5"
           style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}
         >
-          {testimonials.map((t, i) => (
+          {items.map((t, i) => (
             <div key={t.name} className="t-card relative">
               {/* Review number */}
               <span className="absolute top-6 right-7 font-inter text-[9px] tracking-[0.2em] text-[rgba(212,184,150,0.18)] uppercase select-none">

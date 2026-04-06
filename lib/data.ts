@@ -52,6 +52,38 @@ export const servicesMeta = [
     title: 'Cardiology',
     desc: 'Heart health assessments, ECG, stress tests, and long-term cardiac care management plans.',
   },
+  {
+    title: 'Dermatology',
+    desc: 'Skin consultations, acne treatment, mole checks, and cosmetic dermatology services for all ages.',
+  },
+  {
+    title: 'Orthopaedics',
+    desc: 'Bone, joint, and muscle care — from sports injuries and fractures to spine and hip conditions.',
+  },
+  {
+    title: 'Gynaecology',
+    desc: 'Women\'s health across all life stages: prenatal care, fertility support, and menopause management.',
+  },
+  {
+    title: 'Neurology',
+    desc: 'Expert assessment of headaches, epilepsy, stroke risk, and neurological conditions with compassionate follow-up.',
+  },
+  {
+    title: 'Ophthalmology',
+    desc: 'Complete eye care — vision screenings, cataract evaluation, glaucoma monitoring, and retinal assessments.',
+  },
+  {
+    title: 'Pulmonology',
+    desc: 'Assessment and management of asthma, COPD, sleep apnoea, and respiratory infections.',
+  },
+  {
+    title: 'Physiotherapy',
+    desc: 'Targeted rehabilitation programmes for post-surgical recovery, chronic pain, and sports performance.',
+  },
+  {
+    title: 'Mental Wellness',
+    desc: 'Counselling, stress management, and holistic psychiatric support in a confidential, judgment-free space.',
+  },
 ];
 
 /* ── Doctors / Team ── */

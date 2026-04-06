@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 import { testimonials } from '@/lib/data';
 
 // Increased to 47 for denser visuals, now that the graphics are optimized
-const NUM_CARDS = 20;
+const NUM_CARDS = 45;
 const FOV = 850;
 const Z_SPAWN = 3000;
 const Z_KILL = 40;
