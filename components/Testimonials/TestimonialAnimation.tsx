@@ -64,8 +64,10 @@ export default function TestimonialAnimation() {
     });
 
     let last = 0;
+    let isVisible = false;
 
     function tick(ts: number) {
+      if (!isVisible) return;
       const dt = last ? Math.min(ts - last, 33) : 16;
       last = ts;
 
@@ -100,15 +102,33 @@ export default function TestimonialAnimation() {
         const opacity = Math.max(0, Math.min(1, fadeIn * fadeOut));
 
         card.style.opacity = String(opacity);
-        // Removed `willChange` hardware layer spam to reduce render thrashing.
         card.style.transform = `translate3d(${screenX}px,${screenY}px,0) translate(-50%,-50%) scale(${scale})`;
       }
 
       animRef.current = requestAnimationFrame(tick);
     }
 
-    animRef.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(animRef.current);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) {
+          last = 0; // Reset last dt
+          animRef.current = requestAnimationFrame(tick);
+        } else {
+          cancelAnimationFrame(animRef.current);
+        }
+      },
+      { threshold: 0.01 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(animRef.current);
+    };
   }, []);
 
   return (

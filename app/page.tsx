@@ -1,9 +1,11 @@
 import Hero from '@/components/Hero/Hero';
-import Services from '@/components/Services/Services';
-import WhyUs from '@/components/WhyUs/WhyUs';
-import Team from '@/components/Team/Team';
-import Testimonials from '@/components/Testimonials/Testimonials';
-import Cta from '@/components/Cta/Cta';
+import dynamic from 'next/dynamic';
+
+const Services = dynamic(() => import('@/components/Services/Services'), { ssr: true });
+const WhyUs = dynamic(() => import('@/components/WhyUs/WhyUs'), { ssr: true });
+const Team = dynamic(() => import('@/components/Team/Team'), { ssr: true });
+const Testimonials = dynamic(() => import('@/components/Testimonials/Testimonials'), { ssr: true });
+const Cta = dynamic(() => import('@/components/Cta/Cta'), { ssr: true });
 
 export default function Home() {
   return (
