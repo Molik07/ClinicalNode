@@ -178,7 +178,7 @@ export default async function ServicesPage() {
       `}</style>
 
       {/* ── Page Hero ── */}
-      <div className="relative overflow-hidden pt-40 pb-20 px-12">
+      <div className="relative overflow-hidden pt-28 md:pt-40 pb-16 md:pb-20 px-5 md:px-12">
         {/* Decorative rings — light green tones */}
         <div className="absolute rounded-full border-[0.5px] border-[rgba(61,99,64,0.1)] pointer-events-none w-[500px] h-[500px] -top-[160px] -right-[160px]" />
         <div className="absolute rounded-full border-[0.5px] border-[rgba(61,99,64,0.06)] pointer-events-none w-[700px] h-[700px] -top-[240px] -right-[240px]" />
@@ -207,7 +207,7 @@ export default async function ServicesPage() {
       </div>
 
       {/* ── Services Grid ── */}
-      <div className="px-12 pb-32">
+      <div className="px-5 md:px-12 pb-20 md:pb-32">
         {/* Count badge */}
         <div className="flex items-center gap-3 mb-10">
           <span className="font-inter text-[9px] tracking-[0.22em] text-muted-light uppercase">
@@ -218,7 +218,7 @@ export default async function ServicesPage() {
 
         <div
           className="grid gap-4"
-          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))' }}
+          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))' }}
         >
           {services.map((svc, i) => (
             <div key={svc.title} className="s-card relative">

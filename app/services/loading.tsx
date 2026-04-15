@@ -35,17 +35,17 @@ export default function ServicesLoading() {
       `}</style>
 
       {/* ── Hero skeleton ── */}
-      <div className="relative overflow-hidden pt-40 pb-20 px-12">
+      <div className="relative overflow-hidden pt-28 md:pt-40 pb-16 md:pb-20 px-5 md:px-12">
         {/* Back link */}
         <div className="sk mb-8" style={{ width: 100, height: 10 }} />
         {/* Eyebrow */}
         <div className="sk mb-4" style={{ width: 160, height: 10 }} />
         {/* h1 line 1 */}
-        <div className="sk mb-3" style={{ width: 420, height: 48 }} />
+        <div className="sk mb-3" style={{ width: 'min(420px, 80%)', height: 48 }} />
         {/* h1 line 2 */}
         <div className="sk mb-7" style={{ width: 280, height: 48 }} />
         {/* Subtitle lines */}
-        <div className="sk mb-2" style={{ width: 520, height: 12 }} />
+        <div className="sk mb-2" style={{ width: 'min(520px, 90%)', height: 12 }} />
         <div className="sk mb-2" style={{ width: 460, height: 12 }} />
         <div className="sk" style={{ width: 320, height: 12 }} />
 
@@ -53,7 +53,7 @@ export default function ServicesLoading() {
       </div>
 
       {/* ── Grid skeleton ── */}
-      <div className="px-12 pb-32">
+      <div className="px-5 md:px-12 pb-20 md:pb-32">
         {/* Count badge row */}
         <div className="flex items-center gap-3 mb-10">
           <div className="sk" style={{ width: 90, height: 10 }} />
@@ -62,7 +62,7 @@ export default function ServicesLoading() {
 
         <div
           className="grid gap-4"
-          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))' }}
+          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))' }}
         >
           {Array.from({ length: 12 }).map((_, i) => (
             <div key={i} className="sk-card">

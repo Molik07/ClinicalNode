@@ -10,7 +10,7 @@ export default function WhyUs() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden min-h-[120vh] py-28 px-12 flex items-center justify-center"
+      className="relative overflow-hidden min-h-screen md:min-h-[120vh] py-16 md:py-28 px-5 md:px-12 flex items-center justify-center"
       style={{
         background: `
           radial-gradient(ellipse 600px 500px at 85% 15%, rgba(92,61,30,0.22) 0%, transparent 65%),
@@ -44,7 +44,7 @@ export default function WhyUs() {
         }}
       />
 
-      <div className="grid grid-cols-2 gap-20 items-center w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center w-full">
         {/* Left — Heading & CTA */}
         <div>
           <p className="reveal font-inter text-[9.5px] tracking-[0.25em] text-forest-faint/60 uppercase mb-4">
@@ -67,7 +67,7 @@ export default function WhyUs() {
         </div>
 
         {/* Right — 2×2 Numbered Grid */}
-        <div className="reveal border-[0.5px] border-[rgba(184,204,176,0.12)] rounded-[16px] overflow-hidden grid grid-cols-2">
+        <div className="reveal border-[0.5px] border-[rgba(184,204,176,0.12)] rounded-[16px] overflow-hidden grid grid-cols-1 sm:grid-cols-2">
           {whyUsItems.map((item, i) => (
             <div
               key={item.num}

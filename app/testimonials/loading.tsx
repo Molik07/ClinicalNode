@@ -43,7 +43,7 @@ export default function TestimonialsLoading() {
       `}</style>
 
       {/* ── Hero skeleton ── */}
-      <div className="relative overflow-hidden pt-40 pb-20 px-12">
+      <div className="relative overflow-hidden pt-28 md:pt-40 pb-16 md:pb-20 px-5 md:px-12">
         {/* Back link */}
         <div className="sk-d mb-8" style={{ width: 100, height: 10 }} />
         {/* Eyebrow */}
@@ -60,7 +60,7 @@ export default function TestimonialsLoading() {
       </div>
 
       {/* ── Grid skeleton ── */}
-      <div className="px-12 pb-32">
+      <div className="px-5 md:px-12 pb-20 md:pb-32">
         {/* Count badge */}
         <div className="flex items-center gap-3 mb-10">
           <div className="sk-d" style={{ width: 80, height: 10 }} />
@@ -69,7 +69,7 @@ export default function TestimonialsLoading() {
 
         <div
           className="grid gap-5"
-          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}
+          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))' }}
         >
           {Array.from({ length: 12 }).map((_, i) => (
             <div key={i} className="sk-d-card">
@@ -106,7 +106,7 @@ export default function TestimonialsLoading() {
       </div>
 
       {/* ── Bottom CTA skeleton ── */}
-      <div className="mx-12 pb-24 pt-16" style={{ borderTop: '0.5px solid rgba(212,184,150,0.1)' }}>
+      <div className="mx-5 md:mx-12 pb-16 md:pb-24 pt-12 md:pt-16" style={{ borderTop: '0.5px solid rgba(212,184,150,0.1)' }}>
         <div className="sk-d mb-4" style={{ width: 140, height: 10 }} />
         <div className="sk-d mb-3" style={{ width: 400, height: 32 }} />
         <div className="sk-d mb-8" style={{ width: 260, height: 32 }} />

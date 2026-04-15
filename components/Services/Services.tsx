@@ -101,7 +101,7 @@ export default function Services({ teaser = false }: ServicesProps) {
     <section
       ref={ref}
       id="services"
-      className="relative overflow-hidden min-h-screen py-28 px-12 border-t-[0.5px] border-[rgba(36,59,36,0.08)] flex flex-col justify-center selection:bg-[#9e6b3a] selection:text-[#faf6ef]"
+      className="relative overflow-hidden min-h-screen py-16 md:py-28 px-5 md:px-12 border-t-[0.5px] border-[rgba(36,59,36,0.08)] flex flex-col justify-center selection:bg-[#9e6b3a] selection:text-[#faf6ef]"
       style={{
         background: `
           radial-gradient(ellipse 600px 500px at 5% 50%, rgba(36,59,36,0.07) 0%, transparent 65%),
@@ -154,7 +154,7 @@ export default function Services({ teaser = false }: ServicesProps) {
           scrollbarColor: 'rgba(46,77,46,0.25) transparent',
         }}
       >
-        <div className={`grid gap-3.5 ${teaser ? 'grid-cols-4' : 'grid-cols-4'}`}>
+        <div className={`grid gap-3.5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`}>
           {items.map((svc, i) => (
             <div
               key={svc.title}

@@ -152,7 +152,7 @@ export default function TestimonialAnimation() {
           ref={(el) => { cardRefs.current[i] = el; }}
           className="absolute top-0 left-0"
           style={{
-            width: '400px',
+            width: 'min(400px, 65vw)',
             background: 'rgba(255,255,255,0.07)',
             border: '0.5px solid rgba(212,184,150,0.18)',
             borderRadius: '16px',

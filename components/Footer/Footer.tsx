@@ -4,7 +4,7 @@ import { footerColumns } from '@/lib/data';
 export default function Footer() {
   return (
     <footer
-      className="relative overflow-hidden border-t-[0.5px] border-line-dark px-12 pt-16 pb-8"
+      className="relative overflow-hidden border-t-[0.5px] border-line-dark px-5 md:px-12 pt-12 md:pt-16 pb-8"
       style={{
         background: `
           radial-gradient(ellipse 600px 400px at 90% 10%, rgba(92,61,30,0.20) 0%, transparent 70%),
@@ -12,10 +12,10 @@ export default function Footer() {
         `,
       }}
     >
-      {/* Main Grid */}
-      <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr] gap-12 mb-12">
+      {/* Main Grid — stacks on mobile */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8 lg:gap-12 mb-12">
         {/* Brand column */}
-        <div>
+        <div className="sm:col-span-2 lg:col-span-1">
           <div className="font-playfair text-[1.15rem] font-medium text-text-on-dark mb-4">
             Verdana<em className="text-forest-faint italic"> Health</em>
           </div>
@@ -27,7 +27,7 @@ export default function Footer() {
         {/* Link columns */}
         {footerColumns.map((col) => (
           <div key={col.title}>
-            <div className="font-inter text-[9px] tracking-[0.22em] text-[rgba(184,204,176,0.35)] uppercase mb-5">
+            <div className="font-inter text-[9px] tracking-[0.22em] text-[rgba(184,204,176,0.35)] uppercase mb-4 md:mb-5">
               {col.title}
             </div>
             <div className="flex flex-col gap-2.5">
@@ -45,12 +45,12 @@ export default function Footer() {
         ))}
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t-[0.5px] border-line-dark pt-6 flex justify-between items-center">
+      {/* Bottom bar — stacks on mobile */}
+      <div className="border-t-[0.5px] border-line-dark pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
         <span className="font-inter text-[9.5px] tracking-[0.08em] text-[rgba(184,204,176,0.25)] uppercase">
           © 2026 Verdana Health. All rights reserved.
         </span>
-        <div className="flex gap-[18px]">
+        <div className="flex flex-wrap gap-3 sm:gap-[18px]">
           {['Privacy Policy', 'Terms of Use', 'Accessibility'].map((text) => (
             <span
               key={text}

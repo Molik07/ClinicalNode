@@ -7,7 +7,7 @@ interface PageHeroProps {
 export default function PageHero({ eyebrow, title, subtitle }: PageHeroProps) {
   return (
     <section
-      className="relative overflow-hidden pt-40 pb-20 px-12"
+      className="relative overflow-hidden pt-28 md:pt-40 pb-16 md:pb-20 px-5 md:px-12"
       style={{
         background: `
           radial-gradient(ellipse 600px 400px at 80% 30%, rgba(92,61,30,0.22) 0%, transparent 70%),

@@ -6,7 +6,7 @@ import TestimonialAnimation from './TestimonialAnimation';
 export default function Testimonials() {
   return (
     <section
-      className="relative overflow-hidden flex flex-col items-center justify-center p-12"
+      className="relative overflow-hidden flex flex-col items-center justify-center px-5 py-12 md:p-12"
       style={{
         minHeight: '100vh',
         backgroundColor: '#1c1108',

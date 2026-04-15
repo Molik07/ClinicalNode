@@ -45,7 +45,7 @@ export default async function TestimonialsPage() {
       `}</style>
 
       {/* ── Page Hero ── */}
-      <div className="relative overflow-hidden pt-40 pb-20 px-12">
+      <div className="relative overflow-hidden pt-28 md:pt-40 pb-16 md:pb-20 px-5 md:px-12">
         {/* Decorative rings */}
         <div className="absolute rounded-full border-[0.5px] border-[rgba(212,184,150,0.07)] pointer-events-none w-[500px] h-[500px] -top-[160px] -left-[160px]" />
         <div className="absolute rounded-full border-[0.5px] border-[rgba(212,184,150,0.04)] pointer-events-none w-[700px] h-[700px] -top-[240px] -left-[240px]" />
@@ -74,7 +74,7 @@ export default async function TestimonialsPage() {
       </div>
 
       {/* ── Testimonials Grid ── */}
-      <div className="px-12 pb-32">
+      <div className="px-5 md:px-12 pb-20 md:pb-32">
         {/* Count badge */}
         <div className="flex items-center gap-3 mb-10">
           <span className="font-inter text-[9px] tracking-[0.22em] text-brown-muted/40 uppercase">
@@ -85,7 +85,7 @@ export default async function TestimonialsPage() {
 
         <div
           className="grid gap-5"
-          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}
+          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))' }}
         >
           {items.map((t, i) => (
             <div key={t.name} className="t-card relative">
@@ -144,7 +144,7 @@ export default async function TestimonialsPage() {
       </div>
 
       {/* ── Bottom CTA strip ── */}
-      <div className="border-t-[0.5px] border-[rgba(212,184,150,0.12)] mx-12 pb-24 pt-16">
+      <div className="border-t-[0.5px] border-[rgba(212,184,150,0.12)] mx-5 md:mx-12 pb-16 md:pb-24 pt-12 md:pt-16">
         <p className="font-inter text-[9.5px] tracking-[0.22em] text-brown-muted/50 uppercase mb-4">
           Your story could be next
         </p>
